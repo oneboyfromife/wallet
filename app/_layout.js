@@ -4,6 +4,7 @@ import {StatusBar} from "expo-status-bar";
 import {SafeAreaProvider} from "react-native-safe-area-context";
 
 import {index} from "./index";
+import Colors from "../constants/Colors";
 
 export default function HomeLayout() {
   const [fontsLoaded] = useFonts({
@@ -27,6 +28,9 @@ export default function HomeLayout() {
           initialRouteName="index"
           screenOptions={{
             headerShown: false,
+            contentStyle: {
+              backgroundColor: Colors.background,
+            },
           }}
         />
         <StatusBar style="inverted" />

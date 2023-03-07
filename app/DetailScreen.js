@@ -9,12 +9,12 @@ import {
 import React from "react";
 import Layout from "../constants/Layout";
 import {Ionicons} from "@expo/vector-icons";
-// import { BlurView } from "expo-blur";
+import { BlurView } from "expo-blur";
 
 import Colors from "../constants/Colors";
 import Spacing from "../constants/Spacing";
 import Font from "../constants/Font";
-import {useRouter, useSearchParams} from "expo-router";
+import {Link, useRouter, useSearchParams} from "expo-router";
 
 const BUTTON_SIZE = Spacing * 7;
 const IMAGE_HEIGHT = Layout.window.height / 1.4;
@@ -178,13 +178,18 @@ const DetailScreen = () => {
           Highest Bid: {collection.hightest_bid}
         </Text>
 
-        <TouchableOpacity
-          onPress={() =>
-            navigate("MakeBidScreen", {
-              image: collection.image,
-              currency: collection.currency,
-            })
-          }
+        <Link
+          href={{
+            pathname: "/MakeBidScreen",
+            // /* 1. Navigate to the route with query params */
+            params: {image: collection.image, currency: collection.currency},
+          }}
+          // onPress={() =>
+          //   navigate("MakeBidScreen", {
+          //     image: collection.image,
+          //     currency: collection.currency,
+          //   })
+          // }
           style={{
             marginTop: Spacing * 4,
           }}
@@ -263,7 +268,7 @@ const DetailScreen = () => {
               />
             </View>
           </BlurView>
-        </TouchableOpacity>
+        </Link>
       </View>
     </>
   );

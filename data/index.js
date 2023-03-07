@@ -1,4 +1,3 @@
-
 export const categories = [
   {
     id: 1,
@@ -31,7 +30,7 @@ export const nfts = [
     image: require("../assets/images/nft/IMG_0017.jpg"),
     category: categories[0],
     author: "Author 1",
-    owner: "Owner",
+    owner: "Oneboyfromife",
   },
   {
     id: 2,
@@ -362,7 +361,7 @@ export const collections = [
   },
 ];
 
-export const user= {
+export const user = {
   id: 1,
   name: "Akin",
   image: require("../assets/images/user/avatar.png"),

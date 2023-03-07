@@ -48,7 +48,7 @@ const index = () => {
   }, []);
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <SafeAreaView
         style={{
           marginTop: 25,
@@ -165,7 +165,7 @@ const index = () => {
                 fontSize: Spacing * 1.6,
               }}
             >
-              The week
+              This week
             </Text>
             <Ionicons
               name="chevron-down"
@@ -246,33 +246,35 @@ const index = () => {
                           {collection.handle}
                         </Text>
                       </View>
-                      <Link
-                        href={{
-                          pathname: "/DetailScreen",
-                          // /* 1. Navigate to the details route with query params */
-                          params: {collection: collection},
-                        }}
-                        // onPress={() =>
-                        //   navigate("DetailScreen", {collection: collection})
-                        // }
-                        style={{
-                          padding: Spacing * 2.5,
-                          backgroundColor: Colors.secondary,
-                          borderRadius: Spacing * 3,
-                          justifyContent: "center",
-                          alignItems: "center",
-                        }}
-                      >
-                        <Text
+                      <TouchableOpacity>
+                        <Link
+                          href={{
+                            pathname: "/DetailScreen",
+                            // /* 1. Navigate to the details route with query params */
+                            params: {collection: collection},
+                          }}
+                          // onPress={() =>
+                          //   navigate("DetailScreen", {collection: collection})
+                          // }
                           style={{
-                            fontFamily: Font.gilroyBold,
-                            color: Colors.text,
-                            fontSize: Spacing * 1.7,
+                            padding: Spacing * 2.5,
+                            backgroundColor: Colors.secondary,
+                            borderRadius: Spacing * 3,
+                            justifyContent: "center",
+                            alignItems: "center",
                           }}
                         >
-                          View Collection
-                        </Text>
-                      </Link>
+                          <Text
+                            style={{
+                              fontFamily: Font.gilroyBold,
+                              color: Colors.text,
+                              fontSize: Spacing * 1.7,
+                            }}
+                          >
+                            View Collection
+                          </Text>
+                        </Link>
+                      </TouchableOpacity>
                     </BlurView>
                   )}
                 </ImageBackground>
@@ -289,10 +291,6 @@ export default index;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
     paddingTop: StatusBar.currentHeight,
-    backgroundColor: "#6638f0",
-    padding: 8,
   },
 });
