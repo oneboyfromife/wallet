@@ -6,6 +6,7 @@
     },
     "name": "NFT Store",
     "slug": "wallet-app",
+    "icon": "./assets/images/app_config/adaptive-icon.png",
     "splash": {
       "image": "./assets/images/app_config/splash.png",
       "resizeMode": "contain",
@@ -21,9 +22,15 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.jagatechnologies.nftStore",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app_config/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "82bfe033-e29a-4940-b487-b5c8cc1f950b"
       }
     }
   }
