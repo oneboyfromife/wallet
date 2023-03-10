@@ -15,6 +15,14 @@ export const categories = [
     id: 5,
     name: "Collectibles",
   },
+  {
+    id: 6,
+    name: "Hot",
+  },
+  {
+    id: 7,
+    name: "Archives",
+  },
 ];
 
 const eth = {
@@ -320,10 +328,10 @@ export const collections = [
     name: "Teaser",
     nfts: nfts.slice(2, 7),
     category: categories[0],
-    author: "Matt_Sypien",
+    author: "Namtes Fuoye",
     image: nfts[2].image,
     currency: eth,
-    handle: "@Handle_prime",
+    handle: "@NamtesFuoye",
     hightest_bid: 1.87,
   },
   {
@@ -342,10 +350,10 @@ export const collections = [
     name: "Teaser 3",
     nfts: nfts.slice(10, 15),
     category: categories[2],
-    author: "Matt_Sypien",
+    author: "AKintunde Owojori",
     image: nfts[10].image,
     currency: eth,
-    handle: "@Handle_prime",
+    handle: "@Oneboyfromife",
     hightest_bid: 0.75,
   },
   {
@@ -353,16 +361,16 @@ export const collections = [
     name: "Teaser 4",
     nfts: nfts.slice(13, 17),
     category: categories[3],
-    author: "Matt_Sypien",
+    author: "Mimo Ajileye",
     image: nfts[13].image,
     currency: eth,
-    handle: "@Handle_prime",
+    handle: "@MimoAjileye",
     hightest_bid: 2.63,
   },
 ];
 
 export const user = {
   id: 1,
-  name: "Akin",
-  image: require("../assets/images/user/avatar.png"),
+  name: "Friend",
+  image: require("../assets/images/user/oneboyfromife.jpg"),
 };

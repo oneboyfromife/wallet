@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   Text,
   TextInput,
+  ToastAndroid,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -21,6 +22,10 @@ const BUTTON_SIZE = Spacing * 7;
 const MakeBidScreen = () => {
   const router = useRouter();
   const {image, currency} = useSearchParams();
+
+  function showToast() {
+    ToastAndroid.show("Your bid is being processed!", ToastAndroid.SHORT);
+  }
 
   return (
     <ImageBackground
@@ -198,7 +203,7 @@ const MakeBidScreen = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-              // onPress={() => router.back()}
+              onPress={showToast}
             >
               <Text
                 style={{
