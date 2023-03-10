@@ -4,7 +4,27 @@
     "web": {
       "bundler": "metro"
     },
-    "name": "wallet-app",
-    "slug": "wallet-app"
+    "name": "NFT Store",
+    "slug": "wallet-app",
+    "splash": {
+      "image": "./assets/images/app_config/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/app_config/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
   }
 }

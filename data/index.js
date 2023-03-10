@@ -371,6 +371,6 @@ export const collections = [
 
 export const user = {
   id: 1,
-  name: "Friend",
+  name: "Oneboyfromife",
   image: require("../assets/images/user/oneboyfromife.jpg"),
 };
